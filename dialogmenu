@@ -1,0 +1,43 @@
+import java.awt.*;  
+import java.awt.event.*;  
+public class dialogmenu extends Frame implements ActionListener  
+{      
+Menu states, cities;      
+public dialogmenu()      
+{          
+MenuBar mb = new MenuBar();          
+setMenuBar(mb);            
+states = new Menu("Indian States");          
+cities = new Menu("Indian Cities");          
+mb.add(states);          
+mb.add(cities);          
+states.addActionListener(this);          
+cities.addActionListener(this);          
+states.add(new MenuItem("Himachal Pradesh"));          
+states.add(new MenuItem("Rajasthan"));          
+states.add(new MenuItem("West Bengal"));          
+states.addSeparator();          
+states.add(new MenuItem("Andhra Pradesh"));          
+states.add(new MenuItem("Tamilnadu"));          
+states.add(new MenuItem("Karnataka"));          
+cities.add(new MenuItem("Delhi"));          
+cities.add(new MenuItem("Jaipur"));          
+cities.add(new MenuItem("Kolkata"));          
+cities.addSeparator();          
+cities.add(new MenuItem("Hyderabad"));          
+cities.add(new MenuItem("Chennai"));          
+cities.add(new MenuItem("Bengaluru"));          
+setTitle("Simple Menu Program");          
+setSize(300, 300);          
+setVisible(true);      
+}        
+public void actionPerformed(ActionEvent e)      
+{          
+String str = e.getActionCommand();          
+System.out.println("You selected " + str);      
+}        
+public static void main(String args[])      
+{          
+new dialogmenu();      
+} 
+}
