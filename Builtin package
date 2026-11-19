@@ -1,0 +1,19 @@
+Calculator.java
+package maths;  
+public class Calculator  
+{      
+public int square(int n)      
+{          
+return n*n;      
+}  
+}   
+Main Program :  
+Main.java import maths.Calculator;  
+class Main  
+{      
+public static void main(String args[])      
+{          
+Calculator c = new Calculator();          
+System.out.println(c.square(8));      
+}  
+}  
