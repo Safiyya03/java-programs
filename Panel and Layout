@@ -1,0 +1,36 @@
+import java.awt.*;  
+import java.applet.*;  
+/*<Applet code="panelexp" width=500 height=500></Applet>*/  
+public class panelexp extends Applet  
+{   
+public void init()   
+{    
+setLayout(new GridLayout(2,2));    
+setFont(new Font("comic sans",Font.BOLD,12));    
+Panel flow=new Panel();    
+flow.add(new Button("flow1"));    
+flow.add(new Button("flow2"));    
+flow.add(new Button("flow3"));    
+flow.add(new Button("flow4"));    
+flow.add(new Label("flowLayout",Label.CENTER));    
+add(flow);    
+Panel border=new Panel();    
+border.setLayout(new BorderLayout());    
+border.add(new Button("NORTH"),BorderLayout.NORTH);    
+border.add(new Button("SOUTH"),BorderLayout.SOUTH);    
+border.add(new Button("EAST"),BorderLayout.EAST);    
+border.add(new Button("WEST"),BorderLayout.WEST);    
+add(border);    
+Panel grid=new Panel();    
+grid.setLayout(new GridLayout());    
+grid.add(new Button("grid1"));    
+grid.add(new Button("grid2"));    
+grid.add(new Button("grid3"));    
+grid.add(new Button("grid4"));    
+add(grid);   
+}   
+public void paint(Graphics g)   
+{    
+g.drawString("GridLayout",285,150);   
+}  
+}         
