@@ -1,0 +1,31 @@
+ Addition.java  
+package mypackage;  
+public class Addition  
+{      
+public int add(int a, int b)      
+{          
+return a + b;      
+}  
+}   
+Step 2: Subtraction.java  
+package mypackage;  
+public class Subtraction  
+{      
+public int Sub(int a, int b)      
+{          
+return a - b;      
+}  
+}   
+Main program : TestPackage.java  
+import mypackage.*;  
+class TestPackage  
+{      
+public static void main(String args[])      
+{          
+Addition obj = new Addition();          
+Subtraction obj2 = new Subtraction();          
+int result = obj.add(10,20);          
+int result2 = obj2.Sub(10,20);          
+System.out.println("Sum = " + result);          
+System.out.println("Difference = " + result2);      
+}  
