@@ -1,0 +1,25 @@
+import java.awt.*;
+import java.applet.*;
+/* <applet code="color" width=500 height=500></applet> */
+public class color extends Applet  
+{      
+public void init()      
+{      
+}        
+public void paint(Graphics g)      
+{          
+setBackground(Color.yellow);          
+g.setColor(Color.blue);          
+Font F1 = new Font("Serif", Font.BOLD, 30);          
+g.setFont(F1);          
+g.drawString("Java Programming", 100, 100);          
+g.setColor(Color.red);          
+Font F2 = new Font("Times New Roman", Font.ITALIC, 30);          
+g.setFont(F2);          
+g.drawString("Java Programming", 100, 200);          
+g.setColor(Color.green);          
+Font F3 = new Font("Arial", Font.BOLD, 30);          
+g.setFont(F3);          
+g.drawString("Java Programming", 100, 300);      
+}  
+}  
