@@ -1,0 +1,39 @@
+import java.awt.Point;
+import java.util.Scanner;
+class PointClass
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter x1:");
+int x1=sc.nextInt();
+System.out.println("Enter y1:");
+int y1=sc.nextInt();
+System.out.println("Enter x2:");
+int x2=sc.nextInt();
+System.out.println("Enter y2:");
+int y2=sc.nextInt();
+Point P=new Point(x1,y1);
+Point P1=new Point(x2,y2);
+if(P.equals(P1))
+System.out.println("INVALID");
+else if(P.x==P1.x)
+System.out.println("VERTICAL LINE");
+else if(P.y==P1.y)
+System.out.println("HORIZONTAL LINE");
+else if(Math.abs(P.x-P1.x)== Math.abs(P.y-P1.y))
+System.out.println("SQUARE");
+else
+System.out.println("RECTANGLE");
+System.out.println("Enter x displacement");
+int dx=sc.nextInt();
+System.out.println("Enter y displacement");
+int dy=sc.nextInt();
+P.translate(dx,dy);
+P1.translate(dx,dy);
+System.out.println("After translation");
+System.out.println("P=("+P.x+","+P.y+")");
+System.out.println("P1=("+P1.x+","+P1.y+")");
+}
+}
+
