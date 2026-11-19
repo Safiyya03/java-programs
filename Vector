@@ -1,0 +1,28 @@
+import java.util.Vector;  
+public class VectorExample  {      
+public static void main(String[] args)      
+{          
+Vector<Integer> vec = new Vector<Integer>(4);          
+vec.add(100);          
+vec.add(101);          
+vec.add(102);          
+vec.add(104);          
+System.out.println("Size Is: "+vec.size());          
+System.out.println("Default Capacity Is: "+vec.capacity());          
+System.out.println("Vector Element Is: "+vec);          
+vec.add(200);          
+vec.add(200);          
+vec.add(204);          
+System.out.println("Size After Addition: "+vec.size());          
+System.out.println("Capacity After Addition Is: "+vec.capacity());          
+System.out.println("The Elements Are: "+vec);          
+if(vec.contains(100))          
+{              
+System.out.println("100 Is Present At The Index."+vec.indexOf(100));          
+}          
+else          
+{              
+System.out.println("Nothing Is Present In The List.");          
+}          
+System.out.println("The First Element Of The Vector Is = "+vec.firstElement());          System.out.println("The Last Element Of The Vector Is = "+vec.lastElement());      
+}  }     
