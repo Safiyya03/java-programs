@@ -1,0 +1,26 @@
+import java.awt.*;  
+import java.applet.*;  
+/*<Applet code="graph" width=500 height=500></Applet>*/  
+public class Graph extends Applet  
+{      
+public void init()      
+{          
+setBackground(Color.white);      
+}        
+public void paint(Graphics g)      
+{          
+g.drawString("Line",15,10);          
+g.drawLine(0,0,60,60);          
+g.drawString("Oval",25,80);          
+g.drawOval(60,60,60,80);          
+g.drawString("Filled Round Rectangle",15,155);         
+g.fillRoundRect(150,150,40,80,20,20);          
+g.drawString("Filled Arc",130,240);          
+g.fillArc(130,250,60,80,0,175);          
+int x[] = {250,300,250,300,250};          
+int y[] = {250,250,300,300,250};          
+int num = 5;          
+g.drawString("Polygon",240,240);          
+g.drawPolygon(x,y,num);      
+}  
+}   
